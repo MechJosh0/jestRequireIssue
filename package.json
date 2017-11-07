@@ -1,0 +1,49 @@
+{
+  "name": "jestrequireissue",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest --no-watchman"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^21.2.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "plugins": [
+      "transform-runtime"
+    ],
+    "presets": [
+      [
+        "env",
+        "es2015"
+      ]
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          "env"
+        ],
+        "plugins": [
+          [
+            "module-resolver",
+            {
+              "alias": {
+                "__data__": "./data"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
